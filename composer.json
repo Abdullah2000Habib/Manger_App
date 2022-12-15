@@ -1,0 +1,17 @@
+{
+    "name": "jaafar/manager-app",
+    "autoload": {
+        "psr-4": {
+            "Jaafar\\ManagerApp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mahmoud2000",
+            "email": "al.gaafar200@gmail.com"
+        }
+    ],
+    "require": {
+        "aws/aws-sdk-php": "^3.247"
+    }
+}

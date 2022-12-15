@@ -1,0 +1,791 @@
+/* Start  Globle Rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+a:focus {
+  outline: none;
+}
+
+
+.btn {
+  background-color: #17a2b8;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 150px;
+  height: 50px;
+  box-shadow: 0 0 10px rgb(0 50 0/0.3);
+  transition: 0.3s;
+}
+
+
+.btn:hover {
+  background-color: #138ea1;
+  color: white;
+}
+
+
+.btn:focus {
+  outline: none;
+}
+
+
+.main-title {
+  margin: 0 auto 30px;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 30px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+
+.main-title::before,
+.main-title::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #007bff;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-title::before {
+  left: -30px;
+}
+
+.main-title::after {
+  right: -30px;
+}
+
+.main-title:hover::before {
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+
+.main-title:hover::after {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+
+.main-title:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+
+
+}
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #eee;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+
+/* Medium */
+@media (min-width:992px) {
+  .container {
+    width: 950px;
+  }
+}
+
+
+
+/* Large */
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Globle Rules */
+
+/* Start Details Section */
+
+.details {
+
+  width: 70%;
+  background-color: white;
+  height: calc(88vh - 120px);
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgb(0 50 0 / 0.2);
+
+}
+
+/* modification */
+.details .items {
+
+  display: flex;
+  padding: 15px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+
+}
+
+.details .items span {
+
+  font-weight: bold;
+  min-width: 140px;
+  ;
+  margin-right: 10px;
+  text-align: start;
+  line-height: 30px;
+  white-space: nowrap;
+
+}
+
+/* modification */
+@media (max-width:632px) {
+
+  .details .items {
+
+    flex-direction: column;
+    padding: 5px;
+    margin: 0;
+  }
+
+
+}
+
+.details .items span:nth-child(2) {
+
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  width: fit-content;
+  height: 30px;
+  color: white;
+  border-radius: 6px;
+
+}
+
+.results .result-box {
+
+  background-color: white;
+  display: flex;
+  padding: 10px;
+  /* modification */
+  flex-direction: column;
+  gap: 10px;
+}
+
+.results .result-box .result-name {
+
+  font-weight: bold;
+  width: 100%;
+  text-align: start;
+  line-height: 30px;
+  position: relative;
+
+
+}
+
+.results .result-box .result-progress {
+
+  height: 30px;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.results .result-name .before {
+
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 3px;
+  top: 0;
+  background-color: #4173a9;
+  width: 30px;
+  height: 30px;
+  color: white;
+  border-radius: 6px;
+
+}
+
+.results .result-box .result-progress span {
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #007bff;
+  transition: all 0.5s;
+
+}
+
+/* Start Responsive Details Section */
+
+@media (max-width:500px) {
+
+  .details {
+
+    width: 90%;
+  }
+
+
+  .details .items span:nth-child(2) {
+
+
+    margin-left: 4px;
+
+  }
+
+}
+
+/* End Responsive Details Section */
+
+/* End  Details Section */
+
+.tabs {
+
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.tabs li {
+
+  padding: 10px;
+  background-color: #f6f4f4;
+  cursor: pointer;
+  transition: 0.2s;
+
+}
+
+.tabs li.active,
+.tabs li:hover {
+
+  background-color: #ddd;
+}
+
+
+.content {
+  background-color: #ddd;
+
+}
+
+.content>div {
+  padding: 20px;
+
+}
+
+.content>div:not(:first-child) {
+  display: none;
+}
+
+
+
+/* Start inc and dec */
+
+.progression {
+  width: 300px;
+  text-align: center;
+}
+
+p.progress-text {
+  font-weight: bold;
+}
+
+.progress-container {
+  display: block;
+  background-color: #f4f1ea;
+  height: 25px;
+}
+
+.progress-bar {
+  background-color: #927f64;
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s;
+}
+
+.config-cache label {
+
+  color: black;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 10px 0;
+  font-size: 23px;
+
+}
+
+.slider {
+
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: brown;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  cursor: pointer;
+
+}
+
+.slider::-webkit-slider-thumb {
+
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+
+}
+
+
+.config-cache div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+}
+
+.config-cache .slider {
+
+  flex: 1;
+
+}
+
+.config-cache span {
+
+  font-size: 22px;
+  width: 200px;
+  padding: 3px;
+  ;
+  font-weight: bold;
+  padding: 10px;
+  color: #007bff;
+}
+
+
+
+
+/* con */
+.config {
+
+  background-color: #ddd;
+  max-width: 950px;
+  height: calc(88vh - 120px);
+  margin: 60px auto;
+  padding: 30px;
+  /* border-radius: 15px; */
+  /* box-shadow: 0 0 10px rgb(0 50 0 / 0.2); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  height: fit-content;
+
+}
+
+
+.icon {
+
+  min-width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.icon img {
+
+  max-width: 60%;
+  max-height: 60%;
+
+}
+
+
+.config form {
+
+  width: 50%;
+  position: relative;
+  height: 100%;
+  padding-left: 20px;
+
+}
+
+.config form div label {
+
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 5px;
+  display: block;
+  color: #007bff;
+  white-space: nowrap;
+}
+
+.config form .config-cache label {
+
+  color: black;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 10px 0;
+  font-size: 23px;
+
+}
+
+
+
+.config form .policy p {
+  white-space: nowrap;
+  font-size: 23px;
+  font-weight: bold;
+  padding-top: 25px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+
+.config form .policy .radio {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+
+.config form .policy .radio label {
+  margin-left: 10px;
+  cursor: pointer;
+  color: gray;
+}
+
+
+.config form .policy .radio input[type="radio"]:checked+label {
+  color: #007bff;
+}
+
+
+.config form .policy .radio input {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+
+.config form button {
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.config form .btn:last-child {
+
+  background-color: #e4071d;
+  width: fit-content;
+
+}
+
+.config form .btn:last-child:hover {
+
+  background-color: red;
+}
+
+.config form .sep {
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+/* Start Responsive Configration Section  */
+
+@media (max-width:995px) {
+
+  .config {
+    margin: 60px auto;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  form {
+    min-width: 100%;
+  }
+
+  .sep {
+    width: 100%
+  }
+
+
+
+
+  .config {
+
+    width: 80%;
+    margin: 50px auto;
+  }
+
+
+}
+
+
+@media (max-width:850px) {
+
+  .config form .policy p {
+
+    white-space: unset;
+  }
+
+}
+
+
+@media (max-width:789px) {
+
+  .config {
+    height: 80vh;
+    margin: 25px auto;
+  }
+
+}
+
+@media (max-width:518px) {
+
+  .config form .sep {
+
+    flex-direction: column-reverse;
+
+  }
+
+  .config form .sep .btn {
+
+    margin-bottom: 0;
+
+  }
+
+
+}
+
+/* End Responsive Configrartion Section   */
+/* End Configrartion Section */
+
+
+
+
+/* ##########################
+########################## chart */
+.chart-container {
+  width: 100%;
+  height: 600px;
+  border: 2px solid darkgrey;
+  padding: 10px;
+  border-radius: 4px;
+
+}
+
+
+/* ###############3 */
+
+.RADIO form {
+
+  width: 50%;
+  position: relative;
+  height: 100%;
+  padding-left: 20px;
+  margin-bottom: 40px;
+
+}
+
+.RADIO form div label {
+
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 5px;
+  display: block;
+  color: #007bff;
+  white-space: nowrap;
+}
+
+.RADIO form .config-cache label {
+
+  color: black;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 10px 0;
+  font-size: 23px;
+
+}
+
+
+
+.RADIO form .policy p {
+  white-space: nowrap;
+  font-size: 23px;
+  font-weight: bold;
+  padding-top: 25px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+
+.RADIO form .policy .radio {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+
+.RADIO form .policy .radio label {
+  margin-left: 10px;
+  cursor: pointer;
+  color: gray;
+}
+
+
+form .policy .radio input[type="radio"]:checked+label {
+  color: #007bff;
+}
+
+
+form .policy .radio input {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.bbtn {
+
+  background-color: #e4071d;
+  width: fit-content;
+
+
+
+}
+
+
+.bbtn:hover {
+
+  background-color: red;
+}
+
+/* ################### */
+
+.results .result-box {
+
+  background-color: white;
+  display: flex;
+  padding: 10px;
+  /* modification */
+  flex-direction: column;
+  gap: 10px;
+}
+
+.results .result-box .result-name {
+
+  font-weight: bold;
+  width: 100%;
+  text-align: start;
+  line-height: 30px;
+  position: relative;
+
+
+}
+
+.results .result-box .result-progress {
+
+  height: 30px;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.results .result-name .before {
+
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 3px;
+  top: 0;
+  background-color: #4173a9;
+  width: 30px;
+  height: 30px;
+  color: white;
+  border-radius: 6px;
+
+}
+
+.results .result-box .result-progress span {
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  background-color: #007bff;
+  transition: all 0.5s;
+
+}
